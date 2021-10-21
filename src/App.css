@@ -1,38 +1,245 @@
-.App {
-  text-align: center;
+/* reset.css */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* settings, helpers */
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+	font-family: Helvetica, sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+	text-decoration: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+a:visited {
+	color: inherit;
 }
 
-.App-link {
-  color: #61dafb;
+.link:hover {
+	text-decoration: underline;
+	cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-link:hover {
+	cursor: pointer;
+	border-bottom: 1px solid white;
+}
+
+h1, h2 {
+	font-size: 2em;
+	font-weight: bold;
+	margin-bottom: 2px;
+}
+
+.italic {
+	font-style: italic;
+}
+
+.wrapper {
+	max-width: 1920px;
+	margin: 0 auto
+}
+
+.main {
+	margin-top: 7em;
+	padding: 0 2em;
+}
+
+/* header */
+
+header {
+	position: fixed;
+	top: 0;
+	padding: 1em;
+	background-color: #000;
+	color: #FFF;
+	width: 100%;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.header-right {
+	display: flex;
+	align-items: center;
+}
+
+.count {
+	margin-right: 1em;
+	text-align: center;
+}
+
+.checkout {
+	background-color: #080;
+	color: #FFF;
+	border: 1px solid #FFF;
+	border-radius: 2px;
+}
+
+.checkout:hover {
+	background-color: #0A0;
+	cursor: pointer;
+}
+
+/* shop */
+
+.products {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.product {
+	width: 8em;
+	height: 8em;
+	margin: 1em;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #000;
+	border-radius: 5px;
+	text-align: center;
+}
+
+.product-link:hover {
+	color:white;
+	background-color: black;
+	border: 0;
+	cursor: pointer;
+}
+
+.fab {
+	font-size: 4em;
+	margin-bottom: 5px;
+}
+
+/* cart */
+.product-cart {
+	height: 10em;
+}
+
+.cart-input {
+	width: 5em;
+}
+
+/* icons */
+
+.fa-android {
+	color: #3D8
+}
+
+.fa-angular {
+	color: #D11;
+}
+
+.fa-app-store {
+	color: #0BE;
+}
+
+.fa-bootstrap {
+	color: #625;
+}
+
+.fa-cloudflare {
+	color: #F82;
+}
+
+.fa-css3 {
+	color: #059;
+}
+
+.fa-docker {
+	color: #0BE;
+}
+
+.fa-ember {
+	color: #a53;
+}
+
+.fa-html5 {
+	color: #e42;
+}
+
+.fa-js {
+	color: #fd4;
+}
+
+.fa-node-js {
+	color: #6A6;
+}
+
+.fa-php {
+	color: #bbd;
+}
+
+.fa-react {
+	color: #6df;
+}
+
+.fa-sass {
+	color: #c69;
+}
+
+.fa-vuejs {
+	color: #4B8;
+}
+
+.fa-wordpress {
+	color: #279;
+}
+
+.fa-yarn {
+	color: #28b;
 }
